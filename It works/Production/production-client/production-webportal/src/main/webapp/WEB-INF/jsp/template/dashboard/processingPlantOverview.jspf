@@ -1,0 +1,21 @@
+<table class="table-condensed" width="100%">
+    <tr>
+        <th>Plant Functionality</th>
+        <td>${processingPlant.functionality}</td>
+    </tr>
+    <tr>
+        <th>Plant Capacity</th>
+        <td>${processingPlant.capacity}</td>
+    </tr>   
+    <tr>
+        <th>Product Description</th>
+        <td>${processingPlant.processingPlantDescription}</td>
+    </tr>  
+</table>
+<table style="margin-left: 80%;">                
+
+    <tr> <td>
+            <a href="${page}/processingPlant/item.form?id=${processingPlant.processingPlantId}">Edit</a>
+        </td>
+    </tr>
+</table>

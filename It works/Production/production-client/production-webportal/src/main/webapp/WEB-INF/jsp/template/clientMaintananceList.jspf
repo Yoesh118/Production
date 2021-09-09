@@ -1,0 +1,30 @@
+<a href="${page}/adminpro/index.htm">Option Tables</a> | <a href="${page}/clientMaintanance/item.form">New Client</a> | <a href="${page}/clientMaintanance/">Client Maintanance List</a>
+<hr/>
+<table id="tableList" class="display" cellspacing="0">
+    <thead>
+    <th>Client Name</th>
+    <th>Product to Maintain</th>
+    <th>Maintanance Status</th>
+    <th>&nbsp</th>
+</thead>
+<tfoot>
+<th>Client Name</th>
+<th>Product to Maintain</th>
+<th>Maintanance Status</th>
+<th>&nbsp</th>
+</tfoot>
+<tbody>
+<c:forEach var="clientMaintanance" items="${items}" >
+    <tr>
+        <td><a href="<c:url value="/clientMaintanance/dashboard/profile.htm?id=${clientMaintanance.clientMaintananceId}"/>">${clientMaintanance.clientName}</a></td>
+        <td>${clientMaintanance.clientMaintananceProduct}</td>
+        <td>${clientMaintanance.batchStatus}</td>
+        <td>
+            <a href="<c:url value="/clientMaintanance/item.form?id=${clientMaintanance.clientMaintananceId}"/>">Edit</a> | 
+            <a href="<c:url value="/clientMaintanance/dashboard/profile.htm?id=${clientMaintanance.clientMaintananceId}"/>">View</a> |
+            <a href="<c:url value="clientMaintanance.delete?id=${clientMaintanance.clientMaintananceId}"/>">Delete</a>
+        </td>
+    </tr>
+</c:forEach>
+</tbody>
+</table>

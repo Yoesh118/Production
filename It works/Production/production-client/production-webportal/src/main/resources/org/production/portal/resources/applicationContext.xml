@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/data/jpa
+    http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd" xmlns:aop="http://www.springframework.org/schema/aop">
+    
+    <mvc:default-servlet-handler/>
+        
+    <jpa:repositories base-package="org.production.business.repo"/>
+    <jpa:repositories base-package="org.production.business.repo.production"/>
+    <mvc:annotation-driven conversion-service="conversionService"/>
+    <bean class="org.springframework.format.support.FormattingConversionServiceFactoryBean" id="conversionService">
+        <property name="converters">
+            <set>
+                
+                <bean class="org.production.portal.web.converter.DistrictConverter"/>          
+                <bean class="org.production.portal.web.converter.UserRoleConverter"/>
+                <bean class="org.production.portal.web.converter.StationConverter"/>
+                <bean class="org.production.portal.web.converter.StationCategoryConverter"/>
+                <bean class="org.production.portal.web.converter.UserConverter"/>
+                <bean class="org.production.portal.web.converter.CityConverter"/>
+                <bean class="org.production.portal.web.converter.UserLevelConverter"/>
+                <bean class="org.production.portal.web.converter.DateConverter"/>
+                
+                
+                
+                <bean class="org.production.portal.web.converter.CompanyAddressConverter"/>
+                <bean class="org.production.portal.web.converter.CompanyConverter"/>
+                <bean class="org.production.portal.web.converter.CompanyBankDetailConverter"/>
+                <bean class="org.production.portal.web.converter.CompanyContactConverter"/>
+                <bean class="org.production.portal.web.converter.CompanyDirectorConverter"/>
+                <bean class="org.production.portal.web.converter.CompanyStatusConverter"/>
+                <bean class="org.production.portal.web.converter.CompanyTypeConverter"/>
+                <bean class="org.production.portal.web.converter.SupportingDocumentConverter"/>
+                
+                
+                
+                <bean class="org.production.portal.web.converter.production.CapacityPlanConverter"/>
+                <bean class="org.production.portal.web.converter.production.EmployeeConverter"/>
+                <bean class="org.production.portal.web.converter.production.MaterialConverter"/>
+                <bean class="org.production.portal.web.converter.production.MachineryConverter"/>
+                <bean class="org.production.portal.web.converter.production.ClientMaintananceConverter"/>
+                <bean class="org.production.portal.web.converter.production.AssetMaintananceConverter"/>
+                <bean class="org.production.portal.web.converter.production.ProcessPlanConverter"/>
+                <bean class="org.production.portal.web.converter.production.ProcessingPlantConverter"/>
+                <bean class="org.production.portal.web.converter.production.ProductBatchConverter"/>
+                <bean class="org.production.portal.web.converter.production.ProductConverter"/>
+                <bean class="org.production.portal.web.converter.production.FinishedProductsConverter"/>
+                <bean class="org.production.portal.web.converter.production.ProductRequirementsConverter"/>
+                <bean class="org.production.portal.web.converter.production.ProductWarehouseConverter"/>
+                <bean class="org.production.portal.web.converter.production.ProductionCostConverter"/>
+                <bean class="org.production.portal.web.converter.production.ProductionRunConverter"/>
+                <bean class="org.production.portal.web.converter.production.ProductionTeamConverter"/>
+                <bean class="org.production.portal.web.converter.production.WorkIncidentConverter"/>
+                <bean class="org.production.portal.web.converter.production.WorkOrderConverter"/>    
+                
+                <bean class="org.production.portal.web.converter.production.ProcessingPlantMachineryConverter"/>
+                <bean class="org.production.portal.web.converter.production.ProcessingPlantMaterialConverter"/>
+                <bean class="org.production.portal.web.converter.production.ProcessingPlantProductionRunConverter"/>
+                <bean class="org.production.portal.web.converter.production.ProcessingPlantProductionTeamConverter"/>
+                <bean class="org.production.portal.web.converter.production.ProcessingPlantToolsConverter"/>     
+                
+                 <bean class="org.production.portal.web.converter.production.ProductWarehousePosConverter"/>
+                 <bean class="org.production.portal.web.converter.production.ProductWarehouseProductConverter"/>
+                 <bean class="org.production.portal.web.converter.production.ProductWarehouseProductionTeamConverter"/>
+                 <bean class="org.production.portal.web.converter.production.ProductWarehouseMachineryConverter"/>
+                 <bean class="org.production.portal.web.converter.production.ProductWarehouseToolsConverter"/>
+                 <bean class="org.production.portal.web.converter.production.BatchStatusConverter"/>
+                 
+                 <bean class="org.production.portal.web.converter.production.IncidentCostConverter"/>
+                 <bean class="org.production.portal.web.converter.production.OtherConverter"/>
+                 <bean class="org.production.portal.web.converter.production.ProcurementCostConverter"/>
+                 <bean class="org.production.portal.web.converter.production.CustomerConverter"/>
+                 <bean class="org.production.portal.web.converter.production.CustomersConverter"/>
+                 <bean class="org.production.portal.web.converter.production.CustomerLevelConverter"/>
+                 
+                           
+            </set>
+        </property>
+    </bean> 
+</beans>

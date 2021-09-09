@@ -1,0 +1,9 @@
+<table class="table-condensed" id="pat-profile" width="100%" style="font-size: 1.1em;">
+    <tbody>
+        <tr>
+            <th>Plant Name :</th>
+            <td>
+                ${productionCost.name} 
+            </td>
+    </tbody>
+</table>

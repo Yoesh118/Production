@@ -1,0 +1,24 @@
+<table class="table-condensed" id="pat-profile" width="100%" style="font-size: 1.1em;">
+    <tbody>
+        <tr>
+            <th>Name :</th>
+            <td>
+                ${product.productName} 
+            </td>
+            <th>Product No.</th>
+            <td>
+                ${product.productName}
+            </td>
+        </tr>
+        <tr>
+            <th>Contact Person</th>
+            <td>
+                ${product.productName}   
+            </td>
+            <th>Credit Limit</th>
+            <td>
+                ${product.productName}
+            </td>
+        </tr>
+    </tbody>
+</table>

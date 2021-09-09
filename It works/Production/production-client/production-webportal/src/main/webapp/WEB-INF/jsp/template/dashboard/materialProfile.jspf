@@ -1,0 +1,20 @@
+<table class="table-condensed" id="pat-profile" width="100%" style="font-size: 1.1em;">
+    <tbody>
+        <tr>
+            <th>Name :</th>
+            <td>
+                ${material.name} 
+            </td>
+            <th>Material Description:</th>
+            <td>
+                ${material.materialDescription}
+            </td>
+        </tr>
+        <tr>
+            <th>Quantity</th>
+            <td>
+                ${material.quantity}   
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,14 @@
+<table class="table-condensed" id="pat-profile" width="100%" style="font-size: 1.1em;">
+    <tbody>
+        <tr>
+            <th>Client Name :</th>
+            <td>
+                ${clientMaintanance.clientName} 
+            </td>
+            <th>Maintanance Status :</th>
+            <td>
+                ${clientMaintanance.batchStatus}
+            </td>
+        </tr>
+    </tbody>
+</table>

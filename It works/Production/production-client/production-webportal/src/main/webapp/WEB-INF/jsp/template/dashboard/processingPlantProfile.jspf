@@ -1,0 +1,20 @@
+<table class="table-condensed" id="pat-profile" width="100%" style="font-size: 1.1em;">
+    <tbody>
+        <tr>
+            <th>Plant Name :</th>
+            <td>
+                ${processingPlant.processingPlantName} 
+            </td>
+            <th>Plant Location :</th>
+            <td>
+                ${processingPlant.processingPlantLocation}
+            </td>
+        </tr>
+        <tr>
+            <th>Capacity Status :</th>
+            <td>
+                ${processingPlant.capacityStatus}   
+            </td>
+        </tr>
+    </tbody>
+</table>

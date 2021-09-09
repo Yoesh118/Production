@@ -1,0 +1,36 @@
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+    <li class=""><a href="#pos" data-toggle="tab">Point Of Sale</a></li>
+    <li class=""><a href="#machinery" data-toggle="tab">Machinery</a></li>
+     <li class=""><a href="#tools" data-toggle="tab">Tools</a></li>
+     <li class=""><a href="#team" data-toggle="tab">Team</a></li>
+     <li class=""><a href="#product" data-toggle="tab">Product</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="overview">
+        <br/>
+        <%@include file="productWarehouseOverview.jspf" %>
+    </div>
+    <div class="tab-pane fade" id="pos">
+        <br/>
+        <%@include file="productWarehousePosList.jspf" %>
+    </div>
+    <div class="tab-pane fade" id="machinery">
+        <br/>
+        <%@include file="productWarehouseMachineryList.jspf" %>
+    </div>
+     <div class="tab-pane fade" id="tools">
+        <br/>
+        <%@include file="productWarehouseToolsList.jspf" %>
+    </div>
+     <div class="tab-pane fade" id="team">
+        <br/>
+        <%@include file="productWarehouseProductionTeamList.jspf" %>
+    </div>
+    <div class="tab-pane fade" id="product">
+        <br/>
+        <%@include file="productWarehouseProductList.jspf" %>
+    </div>
+</div>

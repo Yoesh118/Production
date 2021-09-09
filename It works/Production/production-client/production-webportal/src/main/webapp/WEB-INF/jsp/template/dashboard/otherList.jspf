@@ -1,0 +1,38 @@
+<b class="titleHeader">Cost Details</b>  | <a href="../other/item.form?productionCostId=${productionCost.productionCostId}">New Cost</a><br/>
+<hr/>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="display itemList" cellspacing="0">
+            <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Amount</th>
+                  <th>Payment Status</th>
+                  <th>Payment Date</th>
+                  <th>Shortfall</th>
+                  <th>Payment Deadline</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+             <c:forEach var="other" items="${other}" >
+                                <tr>
+                                    <td><a href="<c:url value="item.form?id=${other.otherId}"/>">${other.name}</a></td>
+                                    <td>${other.description}</td>
+                                    <td>${other.cost}</td>
+                                    <td>${other.batchStatus}</td>  
+                                    <td>${other.datePaid}</td>  
+                                    <td>${other.shortfall}</td>  
+                                    <td>${other.deadline}</td>    
+                                    <td>
+                                        <a href="<c:url value="../other/item.form?id=${other.otherId}"/>">Edit | </a>
+                                        <a href="<c:url value="../other/item.delete?id=${other.otherId}"/>">Delete</a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+            </tbody>
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<table class="table-condensed" width="100%">
+    <tr>
+        <th> Name</th>
+        <td>${productionCost.name}</td>
+    </tr>   
+</table>
+<table style="margin-left: 80%;">                
+
+    <tr> <td>
+            <a href="${page}/productionCost/item.form?id=${productionCost.productionCostId}">Edit</a>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,20 @@
+<table class="table-condensed" id="pat-profile" width="100%" style="font-size: 1.1em;">
+    <tbody>
+        <tr>
+            <th>Name :</th>
+            <td>
+                ${productWarehouse.warehouseName} 
+            </td>
+            <th>Description :</th>
+            <td>
+                ${productWarehouse.warehouseDescription}
+            </td>
+        </tr>
+        <tr>
+            <th>Id :</th>
+            <td>
+                ${productWarehouse.warehouseId}   
+            </td>
+        </tr>
+    </tbody>
+</table>

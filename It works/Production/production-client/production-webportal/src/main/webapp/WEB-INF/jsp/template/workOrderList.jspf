@@ -1,0 +1,33 @@
+<a href="${page}/adminpro/index.htm">Option Tables</a> | <a href="${page}/workOrder/item.form">New Order</a> | <a href="${page}/workOrder/">Work Order List</a>
+<hr/>
+<table id="tableList" class="display" cellspacing="0">
+    <thead>
+    <th>Order No</th>
+    <th>Customer Name</th>
+    <th>Collection Date</th>
+    <th>Total Cost</th>
+    <th>&nbsp</th>
+</thead>
+<tfoot>
+ <th>Order No</th>
+    <th>Customer Name</th>
+    <th>Collection Date</th>
+    <th>Total Cost</th>
+<th>&nbsp</th>
+</tfoot>
+<tbody>
+<c:forEach var="workOrder" items="${items}" >
+    <tr>
+        <td><a href="<c:url value="/workOrder/dashboard/profile.htm?id=${workOrder.workOrderId}"/>">${workOrder.workOrderNo}</a></td>
+        <td>${workOrder.customer}</td>
+        <td>${workOrder.collectionDate}</td>
+        <td>${workOrder.quantity * workOrder.cost}</td>
+        <td>
+            <a href="<c:url value="/workOrder/item.form?id=${workOrder.workOrderId}"/>">Edit</a> | 
+            <a href="<c:url value="/workOrder/dashboard/profile.htm?id=${workOrder.workOrderId}"/>">View</a> |
+            <a href="<c:url value="workOrder.delete?id=${workOrder.workOrderId}"/>">Delete</a>
+        </td>
+    </tr>
+</c:forEach>
+</tbody>
+</table>

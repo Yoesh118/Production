@@ -1,0 +1,14 @@
+<table class="table-condensed" id="pat-profile" width="100%" style="font-size: 1.1em;">
+    <tbody>
+        <tr>
+            <th>Name :</th>
+            <td>
+                ${productBatch.productBatchName} 
+            </td>
+            <th>Status :</th>
+            <td>
+                ${productBatch.batchStatus}
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,31 @@
+<a href="${page}/adminpro/index.htm">Option Tables</a> | <a href="${page}/material/item.form">New Material</a> | <a href="${page}/material/">Material List</a>
+<hr/>
+<table id="tableList" class="display" cellspacing="0"> 
+    <thead>
+    <th>Material Name</th>
+    <th>Material Quantity</th>
+    <th>Material Description</th>
+    <th>&nbsp</th>
+</thead>
+<tfoot>
+ <th>Material Name</th>
+    <th>Material Quantity</th>
+    <th>Material Description</th>
+    <th>&nbsp</th>
+<th>&nbsp</th>
+</tfoot>
+<tbody>
+<c:forEach var="material" items="${items}" >
+    <tr>
+        <td><a href="<c:url value="/material/dashboard/profile.htm?id=${material.materialId}"/>">${material.name}</a></td>
+        <td>${material.quantity}</td>
+        <td>${material.materialDescription}</td>
+        <td>
+            <a href="<c:url value="/material/item.form?id=${material.materialId}"/>">Edit</a> | 
+            <a href="<c:url value="/material/dashboard/profile.htm?id=${material.materialId}"/>">View</a> |
+            <a href="<c:url value="material.delete?id=${material.materialId}"/>">Delete</a>
+        </td>
+    </tr>
+</c:forEach>
+</tbody>
+</table>

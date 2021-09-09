@@ -1,0 +1,29 @@
+<table class="table-condensed" width="100%">
+    <tr>
+        <th>Maintanance Description</th>
+        <td>${assetMaintanance.assetMaintananceDescription}</td>
+    </tr>
+    <tr>
+        <th>Maintanance Company</th>
+        <td>${assetMaintanance.maintananceCompany}</td>
+    </tr>   
+    <tr>
+        <th>Company Address</th>
+        <td>${assetMaintanance.companyAddress}</td>
+    </tr> 
+    <tr>
+        <th>Company Bank Details</th>
+        <td>${assetMaintanance.companyBankDetails}</td>
+    </tr>  
+     <tr>
+        <th>Maintanance Cost</th>
+        <td>${assetMaintanance.cost}</td>
+    </tr>
+</table>
+<table style="margin-left: 80%;">                
+
+    <tr> <td>
+            <a href="${page}/assetMaintanance/item.form?id=${assetMaintanance.assetMaintananceId}">Edit</a>
+        </td>
+    </tr>
+</table>

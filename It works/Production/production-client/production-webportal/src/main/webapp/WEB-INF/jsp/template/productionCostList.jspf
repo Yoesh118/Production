@@ -1,0 +1,23 @@
+<a href="${page}/adminpro/index.htm">Option Tables</a> |<a href="${page}/productionCost/">Production Cost List</a>
+<hr/>
+<table id="tableList" class="display" cellspacing="0">
+    <thead>
+    <th>Name</th>
+    <th>&nbsp</th>
+</thead>
+<tfoot>
+<th> Name</th>
+    <th>&nbsp</th>
+</tfoot>
+<tbody>
+<c:forEach var="productionCost" items="${items}" >
+    <tr>
+        <td><a href="<c:url value="/productionCost/dashboard/profile.htm?id=${productionCost.productionCostId}"/>">${productionCost.name}</a></td>
+        <td>
+            <a href="<c:url value="/productionCost/item.form?id=${productionCost.productionCostId}"/>">Edit</a> | 
+            <a href="<c:url value="/productionCost/dashboard/profile.htm?id=${productionCost.productionCostId}"/>">View</a>
+        </td>
+    </tr>
+</c:forEach>
+</tbody>
+</table>

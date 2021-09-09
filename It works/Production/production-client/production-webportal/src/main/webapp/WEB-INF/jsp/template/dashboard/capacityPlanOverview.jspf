@@ -1,0 +1,39 @@
+<table class="table-condensed" width="100%">
+    <tr>
+        <th>Plan Id</th>
+        <td>${capacityPlan.capacityPlanId}</td>
+        <th>Description</th>
+        <td>${capacityPlan.capacityPlanDescription}</td>
+    </tr>   
+    <tr>
+        <th>labour</th>
+        <td>${capacityPlan.labour}</td>
+        <th>material</th>
+        <td>${capacityPlan.material}</td>
+    </tr>  
+    <tr>
+        <th>equipment</th>
+        <td>${capacityPlan.equipment}</td>
+        <th>machinery</th>
+        <td>${capacityPlan.machinery}</td>
+    </tr> 
+    <tr>
+        <th>demand</th>
+        <td>${capacityPlan.demand}</td>
+        <th>workOrder</th>
+        <td>${capacityPlan.workOrder}</td>
+    </tr>
+    <tr>
+        <th>planDate</th>
+        <td>${capacityPlan.planDate}</td>
+        <th>manager</th>
+        <td>${capacityPlan.manager}</td>
+    </tr>
+</table>
+<table style="margin-left: 80%;">                
+
+    <tr> <td>
+            <a href="${page}/capacityPlan/item.form?id=${capacityPlan.capacityPlanId}">Edit</a>
+        </td>
+    </tr>
+</table>

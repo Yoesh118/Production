@@ -1,0 +1,20 @@
+<table class="table-condensed" id="pat-profile" width="100%" style="font-size: 1.1em;">
+    <tbody>
+        <tr>
+            <th>Name :</th>
+            <td>
+                ${finishedProducts.productName} 
+            </td>
+            <th>Product Description</th>
+            <td>
+                ${finishedProducts.productNo}
+            </td>
+        </tr>
+        <tr>
+            <th>Material Id</th>
+            <td>
+                ${finishedProducts.orderNo}   
+            </td>
+        </tr>
+    </tbody>
+</table>

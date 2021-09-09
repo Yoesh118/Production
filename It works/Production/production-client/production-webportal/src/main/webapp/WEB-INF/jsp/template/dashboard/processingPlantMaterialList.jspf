@@ -1,0 +1,33 @@
+<b class="titleHeader">Material Details</b> <a href="../material/item.form?processingPlantId=${processingPlant.processingPlantId}"> | New Material</a><br/>
+<hr/>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="display itemList" cellspacing="0">
+            <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Date Acquired</th>
+                  <th>Quantity</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+             <c:forEach var="processingPlantMaterial" items="${material}" >
+                                <tr>
+                                    <td><a href="<c:url value="item.form?id=${processingPlantMaterial.processingPlantMaterialId}"/>">${processingPlantMaterial.material}</a></td>
+                                    <td>${processingPlantMaterial.processingPlantMaterialDescription}</td>
+                                    <td>${processingPlantMaterial.dateAcquired}</td>
+                                    <td>${processingPlantMaterial.quantity}</td>
+                                  
+                                    <td>
+                                        <a href="<c:url value="../material/item.form?id=${processingPlantMaterial.processingPlantMaterialId}"/>">Edit | </a>
+                                        <a href="<c:url value="../material/item.delete?id=${processingPlantMaterial.processingPlantMaterialId}"/>">Delete</a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+            </tbody>
+        </table>
+
+    </div>
+</div>

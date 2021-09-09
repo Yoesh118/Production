@@ -1,0 +1,54 @@
+<table class="table-condensed" id="pat-profile" width="100%" style="font-size: 1.1em;">
+    <tbody>
+        <tr>
+            <th>Plan Id :</th>
+            <td>
+                ${capacityPlan.capacityPlanId} 
+            </td>
+            <th>Plan Description</th>
+            <td>
+                ${capacityPlan.capacityPlanDescription}
+            </td>
+        </tr>
+        <tr>
+            <th>Labour</th>
+            <td>
+                ${capacityPlan.labour}   
+            </td>
+            <th>Material</th>
+            <td>
+                ${capacityPlan.material}
+            </td>
+        </tr>
+        <tr>
+            <th>Equipment</th>
+            <td>
+                ${capacityPlan.equipment}   
+            </td>
+            <th>Machinery</th>
+            <td>
+                ${capacityPlan.machinery}
+            </td>
+        </tr>
+        <tr>
+            <th>Demand</th>
+            <td>
+                ${capacityPlan.demand}   
+            </td>
+            <th>Work Order</th>
+            <td>
+                ${capacityPlan.workOrder}
+            </td>
+        </tr>
+        <tr>
+            <th>Plan Date</th>
+            <td>
+                ${capacityPlan.planDate}   
+            </td>
+            <th>Manager</th>
+            <td>
+                ${capacityPlan.manager}
+            </td>
+        </tr>
+    </tbody>
+</table>

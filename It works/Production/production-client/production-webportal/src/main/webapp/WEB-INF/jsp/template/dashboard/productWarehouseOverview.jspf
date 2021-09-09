@@ -1,0 +1,19 @@
+<table class="table-condensed" width="100%">
+    <tr>
+        <th>Warehouse Name</th>
+        <td>${productWarehouse.warehouseName}</td>
+        <th>Warehouse Id</th>
+        <td>${productWarehouse.warehouseId}</td>
+    </tr>   
+    <tr>
+        <th>Warehouse Description</th>
+        <td>${productWarehouse.warehouseDescription}</td>
+    </tr>  
+</table>
+<table style="margin-left: 80%;">                
+
+    <tr> <td>
+            <a href="${page}/productWarehouse/item.form?id=${productWarehouse.warehouseId}">Edit</a>
+        </td>
+    </tr>
+</table>

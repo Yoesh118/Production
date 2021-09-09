@@ -1,0 +1,32 @@
+<b class="titleHeader">Production Run Details</b>  | <a href="../productionRun/item.form?processingPlantId=${processingPlant.processingPlantId}">New Production Run</a><br/>
+<hr/>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="display itemList" cellspacing="0">
+            <thead>
+                <tr>
+                  <th>Run No</th>
+                  <th>Description</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+             <c:forEach var="processingPlantProductionRun" items="${productionRun}" >
+                                <tr>
+                                    <td><a href="<c:url value="item.form?id=${processingPlantProductionRun.processingPlantProductionRunId}"/>">${processingPlantProductionRun.processingPlantProductionRunNo}</a></td>
+                                    <td>${processingPlantProductionRun.processingPlantProductionRunDescription}</td>
+                                    <td>${processingPlantProductionRun.startDate}</td>
+                                    <td>${processingPlantProductionRun.completionDate}</td>                                
+                                    <td>
+                                        <a href="<c:url value="../productionRun/item.form?id=${processingPlantProductionRun.processingPlantProductionRunId}"/>">Edit | </a>
+                                        <a href="<c:url value="../productionRun/item.delete?id=${processingPlantProductionRun.processingPlantProductionRunId}"/>">Delete</a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+            </tbody>
+        </table>
+
+    </div>
+</div>

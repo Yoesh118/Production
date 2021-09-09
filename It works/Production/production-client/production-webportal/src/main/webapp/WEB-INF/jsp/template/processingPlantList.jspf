@@ -1,0 +1,31 @@
+<a href="${page}/adminpro/index.htm">Option Tables</a> | <a href="${page}/processingPlant/item.form">New processingPlant</a> | <a href="${page}/processingPlant/">ProcessingPlant List</a>
+<hr/>
+<table id="tableList" class="display" cellspacing="0">
+    <thead>
+    <th>Plant Name</th>
+    <th>Plant Capacity</th>
+    <th>Plant Functional Status</th>
+    <th>&nbsp</th>
+</thead>
+<tfoot>
+<th>Plant Name</th>
+    <th>Plant Capacity</th>
+    <th>Plant Functional Status</th>
+    <th>&nbsp</th>
+<th>&nbsp</th>
+</tfoot>
+<tbody>
+<c:forEach var="processingPlant" items="${items}" >
+    <tr>
+        <td><a href="<c:url value="/processingPlant/dashboard/profile.htm?id=${processingPlant.processingPlantId}"/>">${processingPlant.processingPlantName}</a></td>
+        <td>${processingPlant.capacity}</td>
+        <td>${processingPlant.capacityStatus}</td>
+        <td>
+            <a href="<c:url value="/processingPlant/item.form?id=${processingPlant.processingPlantId}"/>">Edit</a> | 
+            <a href="<c:url value="/processingPlant/dashboard/profile.htm?id=${processingPlant.processingPlantId}"/>">View</a> |
+            <a href="<c:url value="processingPlant.delete?id=${processingPlant.processingPlantId}"/>">Delete</a>
+        </td>
+    </tr>
+</c:forEach>
+</tbody>
+</table>

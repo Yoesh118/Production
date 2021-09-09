@@ -1,0 +1,28 @@
+<b class="titleHeader"> POS Detail</b>  |<a href="../pos/item.form?warehouseId=${productWarehouse.warehouseId}">New Sale</a><br/>
+    <hr/>
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="display itemList" cellspacing="0">
+                <thead>
+                 <tr>
+                  <th>Order No</th>
+                  <th>Status</th>                       
+                  <th>&nbsp;</th>
+                 </tr>
+                </thead>
+                <tbody>
+                <c:forEach var="item" items="${pos}" varStatus="">
+                    <tr class="gradeA">
+                        <td>${item.orderNo}</td>
+                        <td>${item.batchStatus}</td> 
+                    <td>
+                        <a href="../pos/item.form?productWarehouseId=${item.productWarehousePosId}&id=${item.productWarehousePosId}">Edit</a> | 
+                        <a id="deletecontact" href="../pos/item.delete?id=${item.productWarehousePosId}">Delete</a>
+                    </td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+
+        </div>
+    </div>

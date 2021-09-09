@@ -1,0 +1,40 @@
+<b class="titleHeader">Incident Cost Details</b>  | <a href="../incidentCost/item.form?productionCostId=${productionCost.productionCostId}">New Cost</a><br/>
+<hr/>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="display itemList" cellspacing="0">
+            <thead>
+                <tr>
+                  <th>Incident Description</th>
+                  <th>Repair Company</th>
+                  <th>Company Bank Details</th>
+                  <th>Total Cost</th>
+                  <th>Payable By</th>
+                  <th>Payment Status</th>
+                  <th>Payment Date</th>
+                  <th>Shortfall</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+             <c:forEach var="incidentCost" items="${incidentCost}" >
+                                <tr>
+                                    <td><a href="<c:url value="item.form?id=${incidentCost.incidentCostId}"/>">${incidentCost.workIncident.workIncidentDescription}</a></td>
+                                    <td>${incidentCost.repairCompany}</td>
+                                    <td>${incidentCost.companyDetails}</td>
+                                    <td>${incidentCost.totalCost}</td>
+                                    <td>${incidentCost.deadline}</td>
+                                    <td>${incidentCost.batchStatus}</td>
+                                    <td>${incidentCost.paymentDate}</td>
+                                    <td>${incidentCost.shortfall}</td>
+                                    <td>
+                                        <a href="<c:url value="../incidentCost/item.form?id=${incidentCost.incidentCostId}"/>">Edit | </a>
+                                        <a href="<c:url value="../incidentCost/item.delete?id=${incidentCost.incidentCostId}"/>">Delete</a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+            </tbody>
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<table class="table-condensed" width="100%">
+    <tr>
+        <th>Product to Maintain</th>
+        <td>${clientMaintanance.clientMaintananceProduct}</td>
+    </tr>   
+    <tr>
+        <th>Maintanance Description</th>
+        <td>${clientMaintanance.clientMaintananceDescription}</td>
+    </tr>
+    <tr>
+        <th>Team</th>
+        <td>${clientMaintanance.productionTeam.productionTeamName}</td>
+    </tr> 
+    <tr>
+        <th>Cost to Company</th>
+        <td>${clientMaintanance.companyCost}</td>
+    </tr> 
+    <tr>
+        <th>Cost to Client</th>
+        <td>${clientMaintanance.clientCost}</td>
+    </tr> 
+</table>
+<table style="margin-left: 80%;">                
+
+    <tr> <td>
+            <a href="${page}/clientMaintanance/item.form?id=${clientMaintanance.clientMaintananceId}">Edit</a>
+        </td>
+    </tr>
+</table>

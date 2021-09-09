@@ -1,0 +1,35 @@
+<b class="titleHeader"> Product Detail</b>  |<a href="../product/item.form?warehouseId=${productWarehouse.warehouseId}">New Product</a><br/>
+    <hr/>
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="display itemList" cellspacing="0">
+                <thead>
+                 <tr>
+                  <th>Product No</th>
+                  <th>Product Name</th>
+                  <th>Description</th>
+                  <th>Stock Status</th>
+                  <th>Quantity</th>                       
+                  <th>&nbsp;</th>
+                 </tr>
+                </thead>
+                <tbody>
+                <c:forEach var="item" items="${product}" varStatus="">
+                    <tr class="gradeA">
+                        <td>${item.product.productNo}</td>
+                        <td>${item.product}</td>
+                        <td>${item.product.description}</td>
+                        <td>${item.preferred}</td>
+                        <td>${item.qty}</td> 
+                        
+                    <td>
+                        <a href="../product/item.form?productWarehouseId=${item.productWarehouseProductId}&id=${item.productWarehouseProductId}">Edit</a> | 
+                        <a id="deletecontact" href="../product/item.delete?id=${item.productWarehouseProductId}">Delete</a>
+                    </td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+
+        </div>
+    </div>

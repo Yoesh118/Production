@@ -1,0 +1,36 @@
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+    <li class=""><a href="#machinery" data-toggle="tab">Machinery</a></li>
+     <li class=""><a href="#tools" data-toggle="tab">Tools</a></li>
+     <li class=""><a href="#productionTeam" data-toggle="tab">Team</a></li>
+     <li class=""><a href="#productionRun" data-toggle="tab">Production Run</a></li>
+     <li class=""><a href="#material" data-toggle="tab">Raw Materials</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="overview">
+        <br/>
+        <%@include file="processingPlantOverview.jspf" %>
+    </div>
+    <div class="tab-pane fade" id="machinery">
+        <br/>
+        <%@include file="processingPlantMachineryList.jspf" %>
+    </div>
+         <div class="tab-pane fade" id="tools">
+        <br/>
+        <%@include file="processingPlantToolsList.jspf" %>
+    </div>
+     <div class="tab-pane fade" id="productionTeam">
+        <br/>
+        <%@include file="processingPlantProductionTeamList.jspf" %>
+    </div>
+     <div class="tab-pane fade" id="productionRun">
+        <br/>
+        <%@include file="processingPlantProductionRunList.jspf" %>
+    </div>
+     <div class="tab-pane fade" id="material">
+        <br/>
+        <%@include file="processingPlantMaterialList.jspf" %>
+    </div> 
+</div>

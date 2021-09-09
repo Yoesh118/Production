@@ -1,0 +1,27 @@
+<a href="${page}/adminpro/index.htm">Option Tables</a> | <a href="${page}/productWarehouse/item.form">New Warehouse</a> | <a href="${page}/productWarehouse/">Warehouse List</a>
+<hr/>
+<table id="tableList" class="display" cellspacing="0">
+    <thead>
+   <th>Name</th>
+   <th>Description</th>
+    <th>&nbsp</th>
+</thead>
+<tfoot>
+<th>Name</th>
+<th>Description</th>
+<th>&nbsp</th>
+</tfoot>
+<tbody>
+<c:forEach var="warehouse" items="${items}" >
+    <tr>
+        <td><a href="<c:url value="/productWarehouse/dashboard/profile.htm?id=${warehouse.warehouseId}"/>">${warehouse.warehouseName}</a></td>
+        <td>${warehouse.warehouseDescription}</td>
+        <td>
+            <a href="<c:url value="/productWarehouse/item.form?id=${warehouse.warehouseId}"/>">Edit</a> | 
+            <a href="<c:url value="/productWarehouse/dashboard/profile.htm?id=${warehouse.warehouseId}"/>">View</a> |
+            <a href="<c:url value="productWarehouse.delete?id=${warehouse.warehouseId}"/>">Delete</a>
+        </td>
+    </tr>
+</c:forEach>
+</tbody>
+</table>

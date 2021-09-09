@@ -1,0 +1,31 @@
+<a href="${page}/adminpro/index.htm">Option Tables</a> | <a href="${page}/productionTeam/item.form">New productionTeam</a> | <a href="${page}/productionTeam/">ProcessingPlant List</a>
+<hr/>
+<table id="tableList" class="display" cellspacing="0">
+    <thead>
+    <th>Team Name</th>
+    <th>Team Description</th>
+    <th>Team Status</th>
+    <th>&nbsp</th>
+</thead>
+<tfoot>
+ <th>Team Name</th>
+    <th>Team Description</th>
+    <th>Team Status</th>
+    <th>&nbsp</th>
+<th>&nbsp</th>
+</tfoot>
+<tbody>
+<c:forEach var="productionTeam" items="${items}" >
+    <tr>
+        <td><a href="<c:url value="/productionTeam/dashboard/profile.htm?id=${productionTeam.productionTeamId}"/>">${productionTeam.productionTeamName}</a></td>
+        <td>${productionTeam.productionTeamDescription}</td>
+        <td>${productionTeam.preferred}</td>
+        <td>
+            <a href="<c:url value="/productionTeam/item.form?id=${productionTeam.productionTeamId}"/>">Edit</a> | 
+            <a href="<c:url value="/productionTeam/dashboard/profile.htm?id=${productionTeam.productionTeamId}"/>">View</a> |
+            <a href="<c:url value="productionTeam.delete?id=${productionTeam.productionTeamId}"/>">Delete</a>
+        </td>
+    </tr>
+</c:forEach>
+</tbody>
+</table>

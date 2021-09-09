@@ -1,0 +1,39 @@
+<b class="titleHeader">Machinery Details</b>  | <a href="../machinery/item.form?processingPlantId=${processingPlant.processingPlantId}">New Machinery</a> 
+<hr/>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="display itemList" cellspacing="0">
+            <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Machine No</th>
+                  <th>Description</th>
+                  <th>Capacity</th>
+                  <th>Usage Status</th>
+                  <th>User Name</th>
+                  <th>User Location</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+             <c:forEach var="processingPlantMachinery" items="${machinery}" >
+                                <tr>
+                                    <td><a href="<c:url value="item.form?id=${processingPlantMachinery.processingPlantMachineryId}"/>">${processingPlantMachinery.machinery}</a></td>
+                                    <td>${processingPlantMachinery.machinery.machineNo}</td>
+                                    <td>${processingPlantMachinery.machinery.description}</td>
+                                    <td>${processingPlantMachinery.machinery.machineCapacity}</td>
+                                    <td>${processingPlantMachinery.preferred}</td>
+                                    <td>${processingPlantMachinery.productionTeam.productionTeamName}</td>
+                                    <td>${processingPlantMachinery.userLocation}</td>
+                                  
+                                    <td>
+                                        <a href="<c:url value="../machinery/item.form?id=${processingPlantMachinery.processingPlantMachineryId}"/>">Edit | </a>
+                                        <a href="<c:url value="../machinery/item.delete?id=${processingPlantMachinery.processingPlantMachineryId}"/>">Delete</a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+            </tbody>
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<a href="${page}/adminpro/index.htm">Option Tables</a> | <a href="${page}/productBatch/item.form">New Product</a> | <a href="${page}/productBatch/">Product List</a>
+<hr/>
+<table id="tableList" class="display" cellspacing="0">
+    <thead>
+    <th>Batch Name</th>
+    <th>Batch Quantity</th>
+    <th>Batch Status</th>
+    <th>&nbsp</th>
+</thead>
+<tfoot>
+<th>Batch Name</th>
+    <th>Batch Quantity</th>
+    <th>Batch Status</th>
+<th>&nbsp</th>
+</tfoot>
+<tbody>
+<c:forEach var="productBatch" items="${items}" >
+    <tr>
+        <td><a href="<c:url value="/productBatch/dashboard/profile.htm?id=${productBatch.productBatchId}"/>">${productBatch.productBatchName}</a></td>
+        <td>${productBatch.batchQuantity}</td>
+        <td>${productBatch.batchStatus}</td>
+        <td>
+            <a href="<c:url value="/productBatch/item.form?id=${productBatch.productBatchId}"/>">Edit</a> | 
+            <a href="<c:url value="/productBatch/dashboard/profile.htm?id=${productBatch.productBatchId}"/>">View</a> |
+            <a href="<c:url value="productBatch.delete?id=${productBatch.productBatchId}"/>">Delete</a>
+        </td>
+    </tr>
+</c:forEach>
+</tbody>
+</table>

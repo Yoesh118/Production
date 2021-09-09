@@ -1,0 +1,35 @@
+<b class="titleHeader">Team Details</b>  | <a href="../productionTeam/item.form?processingPlantId=${processingPlant.processingPlantId}">New Team</a> 
+<hr/>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="display itemList" cellspacing="0">
+            <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Team No</th>
+                  <th>Members</th>
+                  <th>Duties</th>
+                  <th>Time Till Free</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+             <c:forEach var="processingPlantProductionTeam" items="${productionTeam}" >
+                                <tr>
+                                    <td>${processingPlantProductionTeam.productionTeam.productionTeamName}</td>
+                                    <td>${processingPlantProductionTeam.productionTeam.teamNo}</td>
+                                    <td>${processingPlantProductionTeam.productionTeam.productionTeamMembers}</td>
+                                    <td>${processingPlantProductionTeam.productionTeam.productionTeamDescription}</td>
+                                    <td>${processingPlantProductionTeam.productionTeam.timeTillFree}</td>
+                                  
+                                    <td>
+                                        <a href="<c:url value="../productionTeam/item.form?id=${processingPlantProductionTeam.processingPlantProductionTeamId}"/>">Edit | </a>
+                                        <a href="<c:url value="../productionTeam/item.delete?id=${processingPlantProductionTeam.processingPlantProductionTeamId}"/>">Delete</a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+            </tbody>
+        </table>
+
+    </div>
+</div>

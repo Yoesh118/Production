@@ -1,0 +1,36 @@
+<b class="titleHeader"> Tool Detail</b>  |<a href="../tools/item.form?processingPlantId=${processingPlant.processingPlantId}">New Tool</a><br/>
+    <hr/>
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="display itemList" cellspacing="0">
+                <thead>
+                 <tr>
+                  <th>Name</th>
+                  <th>Tool No</th>
+                  <th>Description</th>
+                  <th>Usage Status</th>
+                  <th>User Name</th>
+                  <th>User Location</th>                       
+                  <th>&nbsp;</th>
+                 </tr>
+                </thead>
+                <tbody>
+                <c:forEach var="tools" items="${tools}" varStatus="">
+                    <tr class="gradeA">
+                        <td>${tools.tools}</td>
+                        <td>${tools.tools.toolNo}</td>
+                        <td>${tools.tools.description}</td>
+                        <td>${tools.preferred}</td>
+                        <td>${tools.productionTeam.productionTeamName}</td> 
+                        <td>${tools.userLocation}</td> 
+                    <td>
+                        <a href="<c:url value="../tools/item.form?id=${tools.processingPlantToolId}"/>">Edit | </a>
+                        <a href="<c:url value="../tools/item.delete?id=${tools.processingPlantToolId}"/>">Delete</a>
+                    </td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+
+        </div>
+    </div>

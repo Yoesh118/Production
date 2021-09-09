@@ -1,0 +1,18 @@
+<table class="table-condensed" id="pat-profile" width="100%" style="font-size: 1.1em;">
+    <tbody>
+        <tr>
+            <th>Order No :</th>
+            <td>
+                ${processPlan.orderNo} 
+            </td>
+            <th>Order Status :</th>
+            <td>
+                ${processPlan.batchStatus}
+            </td>
+            <th>Start Date :</th>
+            <td>
+                ${processPlan.startDate}
+            </td>
+        </tr>
+    </tbody>
+</table>

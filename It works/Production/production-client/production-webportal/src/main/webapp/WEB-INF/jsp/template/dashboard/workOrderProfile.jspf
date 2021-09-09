@@ -1,0 +1,18 @@
+<table class="table-condensed" id="pat-profile" width="100%" style="font-size: 1.1em;">
+    <tbody>
+        <tr>
+            <th>Order No :</th>
+            <td>
+                ${workOrder.workOrderNo} 
+            </td>
+            <th>Customer Name :</th>
+            <td>
+                ${workOrder.customers}
+            </td>
+            <th>Collection Date :</th>
+            <td>
+                ${workOrder.collectionDate}
+            </td>
+        </tr>
+    </tbody>
+</table>

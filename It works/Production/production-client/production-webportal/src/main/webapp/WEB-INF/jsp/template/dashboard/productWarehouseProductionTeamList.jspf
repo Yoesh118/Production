@@ -1,0 +1,33 @@
+<b class="titleHeader">Team Details</b>  | <a href="../productionTeam/item.form?warehouseId=${productWarehouse.warehouseId}">New Team</a> 
+<hr/>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="display itemList" cellspacing="0">
+            <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Team Members</th>
+                  <th>Duties</th>
+                  <th>Time Till Free</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+             <c:forEach var="productWarehouseProductionTeam" items="${productionTeam}" >
+                                <tr>
+                                    <td><a href="<c:url value="item.form?id=${productWarehouseProductionTeam.productWarehouseProductionTeamId}"/>">${productWarehouseProductionTeam.productionTeam.productionTeamName}</a></td>
+                                    <td>${productWarehouseProductionTeam.productionTeam.productionTeamMembers}</td>
+                                    <td>${productWarehouseProductionTeam.productWarehouseProductionTeamDuties}</td>
+                                    <td>${productWarehouseProductionTeam.productionTeam.timeTillFree}</td>
+                                  
+                                    <td>
+                                        <a href="<c:url value="../productionTeam/item.form?id=${productWarehouseProductionTeam.productWarehouseProductionTeamId}"/>">Edit | </a>
+                                        <a href="<c:url value="../productionTeam/item.delete?id=${productWarehouseProductionTeam.productWarehouseProductionTeamId}"/>">Delete</a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+            </tbody>
+        </table>
+
+    </div>
+</div>

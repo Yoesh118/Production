@@ -1,0 +1,25 @@
+<table class="table-condensed" width="100%">
+    <tr>
+        <th>Company Name</th>
+        <td>${material.companyName}</td>
+    </tr>   
+    <tr>
+        <th>Contact Details</th>
+        <td>${material.contactDetails}</td>
+    </tr> 
+    <tr>
+        <th>Company Address</th>
+        <td>${material.companyAddress}</td>
+    </tr> 
+    <tr>
+        <th>Material Cost</th>
+        <td>${material.materialCost}</td>
+    </tr> 
+</table>
+<table style="margin-left: 80%;">                
+
+    <tr> <td>
+            <a href="${page}/material/item.form?id=${material.materialId}">Edit</a>
+        </td>
+    </tr>
+</table>

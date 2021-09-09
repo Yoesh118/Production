@@ -1,0 +1,26 @@
+<table class="table-condensed" width="100%">
+    <tr>
+        <th>Production Team Name:</th>
+        <td>${productionTeam.productionTeamName}</td>
+    </tr>
+    <tr>
+        <th>Team Description:</th>
+        <td>${productionTeam.productionTeamDescription}</td>
+    </tr>   
+    <tr>
+        <th>Production Team Members:</th>
+        <td>${productionTeam.productionTeamMembers}</td>
+    </tr>   
+    <tr>
+        <th>Time Till Free:</th>
+        <td>${productionTeam.timeTillFree}</td>
+    </tr>  
+</table>
+<table style="margin-left: 80%;">                
+
+    <tr> <td>
+            <a href="${page}/productionTeam/item.form?id=${productionTeam.productionTeamId}">Edit</a>
+        </td>
+    </tr>
+</table>
+        

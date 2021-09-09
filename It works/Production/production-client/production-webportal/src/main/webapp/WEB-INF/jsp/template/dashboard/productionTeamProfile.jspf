@@ -1,0 +1,14 @@
+<table class="table-condensed" id="pat-profile" width="100%" style="font-size: 1.1em;">
+    <tbody>
+        <tr>
+            <th>Team Name :</th>
+            <td>
+                ${productionTeam.productionTeamName} 
+            </td>
+            <th>Team Status :</th>
+            <td>
+                ${productionTeam.preferred}
+            </td>
+        </tr>
+    </tbody>
+</table>

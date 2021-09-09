@@ -1,0 +1,31 @@
+<table class="table-condensed" width="100%">
+    <tr>
+        <th>Process Stages</th>
+        <td>${processPlan.processStages}</td>
+    </tr> 
+    <tr> 
+        <th>Stage No</th>
+        <td>${processPlan.stageNo}</td>
+    </tr>   
+    <tr>
+        <th>Plant Name</th>
+        <td>${processPlan.processingPlant.processingPlantName}</td>
+    </tr> 
+    <tr>
+        <th>Warehouse Name</th>
+        <td>${processPlan.productWarehouse.warehouseName}</td>
+    </tr> 
+    <tr>
+     <th>Description</th>
+            <td>
+                ${processPlan.description}
+            </td>
+    </tr>
+</table>
+<table style="margin-left: 80%;">                
+
+    <tr> <td>
+            <a href="${page}/processPlan/item.form?id=${processPlan.processPlanId}">Edit</a>
+        </td>
+    </tr>
+</table>

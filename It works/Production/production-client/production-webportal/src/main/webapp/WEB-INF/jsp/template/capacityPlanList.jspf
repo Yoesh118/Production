@@ -1,0 +1,23 @@
+<a href="${page}/adminpro/index.htm">Option Tables</a> | <a href="${page}/production/capacityPlan/item.form">New Plan</a> | <a href="${page}/capacityPlan/">Capacity Plan List</a>
+<hr/>
+<table id="tableList" class="display" cellspacing="0">
+       <thead>
+    <th>Name</th>
+    <th>&nbsp</th>
+</thead>
+<tfoot>
+<th>Name</th>
+<th>&nbsp</th>
+</tfoot>
+<tbody>
+    <tr>
+        <td><a href="<c:url value="/productRequirements/"/>">Product Requirements</a></td>
+    </tr>
+    <tr>
+        <td><a href="<c:url value="/productWarehouse/"/>">Warehouse</a></td>
+    </tr>
+    <tr>
+        <td><a href="<c:url value="/processingPlant/"/>">Processing Plant</a></td>
+    </tr>
+</tbody>
+</table>

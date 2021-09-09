@@ -1,0 +1,19 @@
+<table class="table-condensed" width="100%">
+    <tr>
+        <th>Product Name</th>
+        <td>${product.productName}</td>
+        <th>Product Id</th>
+        <td>${product.productId}</td>
+    </tr>   
+    <tr>
+        <th>Product Description</th>
+        <td>${product.productDescription}</td>
+    </tr>  
+</table>
+<table style="margin-left: 80%;">                
+
+    <tr> <td>
+            <a href="${page}/product/item.form?id=${product.productId}">Edit</a>
+        </td>
+    </tr>
+</table>

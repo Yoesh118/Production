@@ -1,0 +1,33 @@
+<table class="table-condensed" width="100%">
+    <tr>
+        <th>Start Date</th>
+        <td>${company.companyNo}</td>
+        <th>Credit Limit</th>
+        <td>${company.companyNo}</td>
+    </tr>   
+    <tr>
+        <th>Balance</th>
+        <td>${company.companyNo}</td>
+        <th>Country</th>
+        <td>${company.name}</td>
+    </tr>  
+    <tr>
+        <th>Industry</th>
+        <td>${company.name}</td>
+        <th>Contact</th>
+        <td>${company.companyNo}</td>
+    </tr> 
+    <tr>
+        <th>Credit Limit</th>
+        <td>${company.companyNo}</td>
+        <th>Currency</th>
+        <td>${company.companyNo}</td>
+    </tr>
+</table>
+<table style="margin-left: 80%;">                
+
+    <tr> <td>
+            <a href="${page}/company/item.form?id=${company.companyId}">Edit</a>
+        </td>
+    </tr>
+</table>
